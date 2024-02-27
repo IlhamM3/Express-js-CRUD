@@ -1,0 +1,6 @@
+step
+
+pnpm install
+xampp membuat db dan koneksikan nama db
+
+pnpm start

@@ -1,7 +1,7 @@
 import User from "../model/ModelUser.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import secretKey from "../configuration/jwtSecret.js";
+const secretKey = "dawdabwdbqiwdi1214312";
 export const loginUsers = async (req, res) => {
     try {
         const user = await User.findOne({ where: { email: req.body.email } }); 
