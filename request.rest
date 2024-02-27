@@ -1,8 +1,5 @@
 // USER DATABASE
 ###
-GET http://localhost:8000/users
-
-###
 curl -X POST \
   http://localhost:8000/register \
   -H 'Content-Type: application/json' \
@@ -20,6 +17,10 @@ curl -X POST \
     "email": "ilham@gmail.com",
     "password": "12345"
   }'
+
+
+###
+GET http://localhost:8000/users
 
 ###
 curl -X PATCH \
