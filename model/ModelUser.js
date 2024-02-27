@@ -5,7 +5,6 @@ import database from "../configuration/DB.js";
 const User = database.define('users', {
     name: {
         type: DataTypes.STRING,
-        allowNull: false 
     },
     email: {
         type: DataTypes.STRING,
