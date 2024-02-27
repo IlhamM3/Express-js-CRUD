@@ -1,0 +1,54 @@
+// USER DATABASE
+###
+GET http://localhost:8000/users
+
+###
+curl -X POST \
+  http://localhost:8000/users \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "ilham",
+    "email": "ilham@gmail.com",
+    "password": "12345"
+  }'
+
+
+###
+curl -X PATCH \
+  http://localhost:8000/users/1 \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "maul",
+    "email": "maul@gmail.com",
+    "password": "12345"
+  }'
+###
+DELETE http://localhost:8000/users/1
+
+// TODOS DATABASE
+###
+GET http://localhost:8000/todos
+
+###
+curl -X POST \
+  http://localhost:8000/todos/ \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "title": "Mengerjakan backend",
+    "deskripsi": "Membuat todolist",
+    "deadline": "2024-03-01",
+    "status": "dikerjakan"
+  }'
+
+###
+curl -X PATCH \
+  http://localhost:8000/todos/1 \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "title": "Mengerjakan Frontend",
+    "deskripsi": "Membuat tampilan dari todo",
+    "deadline": "2024-04-05",
+    "status": "selesai"
+  }'
+###
+DELETE http://localhost:8000/todos/1
