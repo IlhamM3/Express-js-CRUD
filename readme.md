@@ -8,7 +8,7 @@
 pnpm install
 ```
 
-- membuat db di local terlebih dahulu
+- membuat database di local terlebih dahulu lalu sambungkan pada config
 
 - Menjalankan web
 ```sh
