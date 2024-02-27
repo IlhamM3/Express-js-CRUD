@@ -29,7 +29,7 @@ export const createUser = async (req, res) => {
 
 export const loginUsers = async (req, res) => {
     try {
-        const user = await User.findOne({ where: { email: req.body.email } }); // Specify where condition
+        const user = await User.findOne({ where: { email: req.body.email } }); 
         if (!user) {
             return res.status(401).json({ message: "User tidak ditemukan" });
         }
@@ -41,7 +41,7 @@ export const loginUsers = async (req, res) => {
 
         const secretKey = crypto.randomBytes(64).toString('base64');
         const expires = 60 * 60 * 5;
-        const token = jwt.sign({ userId: user.id }, secretKey, { expiresIn: expires }); // Provide a valid secret key
+        const token = jwt.sign({ userId: user.id }, secretKey, { expiresIn: expires });
         res.status(200).json({ token });
     } catch (error) {
         console.error(error.message);
